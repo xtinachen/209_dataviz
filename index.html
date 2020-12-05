@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Nutrition Intake</title>
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <div class="chart">
+      <h1>Nutrition Intake</h1>
+      <div class="description">
+        Line chart demonstrating Christina's calorie intake for the months of April and May 2020.
+      </div>
+      <br />
+      <div id="chart"></div>
+      <div class="chart-footer">
+        <br />
+        By <a href="https://xtinachen.com">Christina Chen</a>.
+        <br />
+        <strong>Source</strong>: <a href="https://github.com/xtinachen/209_dataviz/blob/master/Nutrition%20Daily%20Apr%20%2B%20May%20-%20Daily%20Detailed.csv">My data source</a>
+      </div>
+    </div>
+
+    <br />
+    <br />
+
+    <div class="description">
+      The chart above shows Christina's calorie intake for April and May of 2020, specifically 04-01-2020 to 5-28-2020. The x-axis shows each day in the given time range, with ticks at every Sunday. The y-axis is the amount of calories eaten per day ranging from 0 to 2500 kcals.
+
+      <br />
+    </div>
+
+    <br />
+    <br />
+    <br />
+
+    <h2>Problem Abstraction</h2>
+    <div>
+      Using Tamara Munzner's framework to Abstract the problem (what, why, how)...
+    </div>
+
+    <br />
+    <table>
+      <thead>
+        <tr>
+          <th colspan="2">Problem Abstraction</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>What</td>
+          <td>
+            The dataset we have here is a simple table, with 5 (used) columns and 55 rows. The attributes type here is numerical, the calorie intake by day has a specific numeric value. The data is taken from Christina's personal food tracker, FatSecret.
+          </td>
+        </tr>
+        <tr>
+          <td>Why</td>
+          <td>The visual task to perform here is to demonstrate the trend of calorie intake over the course of two months, to track fitness and nutrition performance. The right chart demonstrates the trends for macronutrients: carbs, fat, and protein for the same duration.
+          </td>
+        </tr>
+        <tr>
+          <td>How</td>
+          <td>The calories chart (left) consists of mainly a brown line chart to demonstrate the trend over time. The dots at each point signifies each data point, or the calorie intake amount for that day.
+          </td>
+        </tr>
+        <tr>
+          <td>Insight 1</td>
+          <td>There seems to be a trend based on the line graph. We see that it highly fluctuates, something we don't necessarily want when viewing our nutrition intake. It seems that there is much more fluctuation as we move more right on the x-axis, or later as time goes on. This could signify that Christina is falling out of her nutrition plan and confirm the research that women typically give up on diets after an average of five weeks.
+          </td>
+        </tr>
+        <tr>
+          <td>Insight 2</td>
+          <td>There seems to be a trend weekly, which is illuminated by the fluctuations. Weekends tend to have less calories noted, which is where we see the downward slope. However, this may not be actually true and could just be that the user is not as regimented in tracking her nutrition while out with friends/family over the weekends. In fact, it could be highly underestimating calorie intake on the weekends as most typically eat more on the weekends during celebrations/outings.
+          </td>
+        </tr>
+        <tr>
+          <td>Interaction (left)</td>
+          <td> Tooltip to show date and exact caloric intake for the date hovered.
+          </td>
+        </tr>
+        <tr>
+          <td>Interaction (right)</td>
+          <td> Hover line to show labels for all values: carbs, fat, and protein.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
